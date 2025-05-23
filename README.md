@@ -11,6 +11,8 @@
 
 ## Como executar:
 
+Primeiro, execute o arquivo ddl.sql para criar as tabelas do seu banco de dados, em seguida utilize o arquivo dados.py para gerar os dados para o seu banco, e preencha o dados.env com suas variáveis de acesso
+
 ## Modelos:
 
 * Modelo Entidade Relacionamento:
