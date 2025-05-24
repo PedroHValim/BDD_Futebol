@@ -1,0 +1,11 @@
+/*Lista quantos jogadores estrangeiros (com a nacionalidade diferente do Brasil) existem em cada time, agrupando por nacionalidade*/
+
+SELECT
+    t.nome AS time,
+    j.nacionalidade,
+    COUNT(*) AS total_estrangeiros
+FROM Jogador j
+JOIN Time t ON t.nome = j.time
+WHERE j.nacionalidade != 'Brasileiro'
+GROUP BY t.nome, j.nacionalidade
+ORDER BY total_estrangeiros DESC;

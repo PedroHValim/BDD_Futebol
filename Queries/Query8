@@ -1,0 +1,15 @@
+/*Coloca em ordem os times que estão vencendo no campeonato desejado*/
+
+SELECT
+    t.nome AS time,
+    tb.pontos,
+    tb.vitorias,
+    tb.empates,
+    tb.derrotas,
+    tb.gols_pro,
+    tb.gols_contra,
+    tb.saldo_gols
+FROM Tabela tb
+JOIN Time t ON t.id = tb.time_id
+WHERE tb.campeonato_id = 152  
+ORDER BY tb.pontos DESC, tb.saldo_gols DESC, tb.vitorias DESC;

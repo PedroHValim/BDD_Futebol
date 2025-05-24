@@ -1,0 +1,7 @@
+/*Quantidade de partidas apitadas por um árbitro específico durante o campeonato*/
+
+SELECT a.nome, COUNT(j.partida_id) AS total_partidas
+FROM Joga j
+JOIN Arbitro a ON j.arbitro_id = a.id
+GROUP BY a.nome
+ORDER BY total_partidas DESC;

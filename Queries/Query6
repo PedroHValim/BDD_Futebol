@@ -1,0 +1,7 @@
+/*Jogos entre dois times específicos (clássicos)*/
+
+SELECT *
+FROM Partida
+WHERE (time1_id = 5 AND time2_id = 14)
+   OR (time1_id = 14 AND time2_id = 5)
+ORDER BY data;

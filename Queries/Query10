@@ -1,0 +1,9 @@
+/*Lista as vitórias jogando em casa e vitórias jogando fora de casa de cada time*/
+
+SELECT
+    t.nome AS time,
+    SUM(CASE WHEN p.time1_id = t.id AND p.placar_time1 > p.placar_time2 THEN 1 ELSE 0 END) AS vitorias_casa,
+    SUM(CASE WHEN p.time2_id = t.id AND p.placar_time2 > p.placar_time1 THEN 1 ELSE 0 END) AS vitorias_fora
+FROM Time t
+LEFT JOIN Partida p ON t.id = p.time1_id OR t.id = p.time2_id
+GROUP BY t.nome;

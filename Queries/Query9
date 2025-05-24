@@ -1,0 +1,10 @@
+/*Lista os 5 times com mais gols marcados no campeonato */
+
+SELECT
+    t.nome AS time,
+    tb.gols_pro
+FROM Tabela tb
+JOIN Time t ON t.id = tb.time_id
+WHERE tb.campeonato_id = 152
+ORDER BY tb.gols_pro DESC
+LIMIT 5;

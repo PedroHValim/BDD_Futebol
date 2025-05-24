@@ -1,0 +1,5 @@
+/*Selecionar os times que se encontram na mesma cidade*/
+
+SELECT *
+FROM Time
+WHERE cidade = 'São Paulo (SP)';

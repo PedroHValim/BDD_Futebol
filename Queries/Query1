@@ -1,0 +1,5 @@
+/*Buscar todos os jogadores de um time específico*/
+
+SELECT *
+FROM Jogador
+WHERE time = 'Flamengo';

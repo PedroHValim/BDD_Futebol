@@ -1,0 +1,5 @@
+/*Selecionar todos os jogadores que possuem a mesma nacionalidade*/
+
+SELECT *
+FROM Jogador
+WHERE nacionalidade = 'Argentino';

@@ -1,0 +1,9 @@
+/*Rodadas com mais gols durante o campeonato*/
+
+SELECT
+    rodada,
+    SUM(placar_time1 + placar_time2) AS total_gols
+FROM Partida
+WHERE campeonato_id = 152
+GROUP BY rodada
+ORDER BY total_gols DESC;
